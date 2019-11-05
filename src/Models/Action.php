@@ -10,7 +10,7 @@ class Action extends BaseModel
     use SoftDeletes;
     protected $dates = ['deleted_at'];
 
-    protected $table = 'reporter_scope';
+    protected $table = 'reporter_action';
 
     protected $fillable = ['name', 'code', 'parent_id', 'sort', 'is_leaf', 'is_available'];
     

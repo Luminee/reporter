@@ -21,6 +21,16 @@ class ReporterRepository extends BaseRepository
         return $this->setModel('action')->where($field, $equal, $value)->getFirst();
     }
 
+    public function listScopes()
+    {
+        return $this->setModel('scope')->orderBy('sort', 'desc')->getCollection();
+    }
+
+    public function listActions()
+    {
+        return $this->setModel('action')->orderBy('sort', 'desc')->getCollection();
+    }
+
     public function createLog($data)
     {
         return $this->setModel('log')->create($data);
